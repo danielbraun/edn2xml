@@ -1,2 +1,2 @@
 # edn2xml
-Transform data structures to HTML
+Transform data structures into HTML
