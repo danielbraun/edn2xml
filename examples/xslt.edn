@@ -1,0 +1,15 @@
+[:xsl:stylesheet
+ {:version "1.0"}
+ [:xsl:template
+  {:match "/"}
+  [:html
+   [:body
+    [:h2 "My CD Collection"]
+    [:table
+     {:border "1"}
+     [:tr {:bgcolor "#9acd32"} [:th "Title"] [:th "Artist"]]
+     [:xsl:for-each
+      {:select "catalog/cd"}
+      [:tr
+       [:td [:xsl:value-of {:select "title"}]]
+       [:td [:xsl:value-of {:select "artist"}]]]]]]]]]
